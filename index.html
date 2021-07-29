@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+  <script src="lambo.js"></script>
+</head>
+
+<body>
+  <a-scene>
+    <a-camera position="0 1 20">
+    </a-camera>
+    <a-assets>
+      <a-asset-item id="lambo" src="./lambo/scene.gltf"></a-asset-item>
+      <audio id="lambosound" src="sound.mp3" preload="auto"></audio>
+    </a-assets>
+    <a-entity lamborghini sound="src:#lambosound;autoplay:true;volume:2" gltf-model="#lambo" light="type: ambient; color: #BBB; intensity: 4" scale="0.05 0.05 0.05" rotation="0 90 0"></a-entity>
+    <a-circle color="#222" radius="10" rotation="-90 0 0"></a-circle>
+  </a-scene>
+</body>
+</html>
